@@ -1,0 +1,7 @@
+ID,Risk,Severity,Status,Evidence needed,Business impact,Recommended remediation
+API-01,Broken Object-Level Authorization (BOLA),High,Illustrative example,Compare object access with two authorized synthetic accounts,Cross-user data exposure,Enforce server-side object ownership and tenant checks
+API-02,Excessive Data Exposure,High,Illustrative example,Compare response fields to approved schema,Unnecessary sensitive data disclosure,Return only required fields using allowlisted response schemas
+API-03,Weak or Inconsistent Authentication,Medium,Illustrative example,Test invalid/expired/wrong-scope credentials in sandbox,Unauthorized or prolonged access,Validate tokens and enforce least-privilege scopes
+API-04,Missing or Ineffective Rate Limits,Medium,Illustrative example,Small approved request count; observe 429 and Retry-After,Automated abuse and service cost,Apply endpoint-aware limits and monitoring
+API-05,Insufficient Input Validation,Medium,Illustrative example,Harmless schema and boundary tests,"Bad data, errors, downstream risk",Server-side schema validation and parameterized queries
+API-06,Verbose Errors or Insecure Configuration,Low,Illustrative example,Review safe errors and CORS headers,Information disclosure or excessive browser access,"Generic errors, protected logs, restrictive CORS"
